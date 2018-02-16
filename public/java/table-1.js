@@ -101,11 +101,6 @@ function ArrangeScore(scoreArray,test){
 	console.log(scoreArray)
 	var total = 0;
 	var sum=0;
-
-		 if(scoreArray.length==0){
-      		return false;
-      	}
-
 		for(var i = 0; i < scoreArray.length; i++) {
 			console.log(scoreArray)
     		total += scoreArray[i].score;
@@ -156,6 +151,7 @@ function ArrangeScore(scoreArray,test){
 
 	for(i=0;i<scoreArray.length;i++){
 		if(scoreArray.length===0){
+			$("#t-body").empty();
 			return false;
 		}
 		else{
