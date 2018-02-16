@@ -31,9 +31,6 @@ $(document).ready(function(){
         url: '/show-one-in-table'
       }).done(function(data) {
 
-      	if(data.length==0){
-      		return false;
-      	}
       	console.log(data)
 	      	for(i=0;i<data.length;i++){
 
@@ -104,6 +101,11 @@ function ArrangeScore(scoreArray,test){
 	console.log(scoreArray)
 	var total = 0;
 	var sum=0;
+
+		 if(scoreArray.length==0){
+      		return false;
+      	}
+
 		for(var i = 0; i < scoreArray.length; i++) {
 			console.log(scoreArray)
     		total += scoreArray[i].score;
