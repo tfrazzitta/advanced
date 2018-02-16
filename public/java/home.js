@@ -1,5 +1,5 @@
 
- var name;
+var name;
 var message;
 
  $(document).on("click","#test-button",function(){
@@ -16,7 +16,6 @@ var message;
 
 
 $(document).ready(function(){
-
   $.ajax({
         method: "GET",
         url: '/hello'
@@ -28,8 +27,6 @@ $(document).ready(function(){
           }
           GetTests();
       })
-
-  
 })
 
 

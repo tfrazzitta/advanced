@@ -32,11 +32,16 @@ $("#google").hide();
 
 $(document).ready(function(){
   $("#google").hide();
-setTimeout( function () { 
-var href = $('#google').attr('href');
-window.location.href = href; 
-      }, 1500);
-})
+    $.get('/createid').done(function(id) {
+      console.log(id)
+      //checkUser();
+    })
+
+    setTimeout( function () { 
+    var href = $('#google').attr('href');
+    window.location.href = href; 
+          }, 1500);
+    })
 
 function checkUser() {
   $.get('/user').done(function(response) {

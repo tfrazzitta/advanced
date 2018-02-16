@@ -306,44 +306,25 @@ app.post("/retrieve-test/:id",function(req,res){
 
 
 
-app.get("/createid",function(req,res){
-  var NewID = new ID ({     
-           testId:"hello",
-           testId2:"hh",
-           Id:4
-  });
-      NewID.save(function(err,doc){
-          if (err){
-          console.log('err: ' + error);
-          res.json('error: there was an error');
-          }
-          else{  
-          //console.log(doc) 
-          res.redirect("/home")
-          }   
-    })
-});
-
-
-// app.get("/get-one-test",function(req,res){
-//   ID.find({Id:4}).exec(function(error,doc){
-//     var testId=doc[0].testId
-//     Test.find({_id:testId}).exec(function(error,doc){
-//       if (error) {
-//        console.log(error)
-//       }
-//       else {
-//         res.send(doc);
-//         console.log(doc)
-//       }
+// app.get("/createid",function(req,res){
+//   var NewID = new ID ({     
+//            testId:"hello",
+//            testId2:"hh",
+//            Id:4
+//   });
+//       NewID.save(function(err,doc){
+//           if (err){
+//           console.log('err: ' + error);
+//           res.json('error: there was an error');
+//           }
+//           else{  
+//           //console.log(doc) 
+//           res.redirect("/home")
+//           }   
 //     })
+// });
 
 
-
-
-
-//   })
-// })
 
 
 app.get("/get-one-test/",function(req,res){
@@ -686,7 +667,39 @@ app.get("/find", function(req, res) {
 
 app.get("/hello", function(req, res) {
    res.send(req.user.google.name);
+
 })
+
+
+app.get("/createid", function(req, res) {
+   ID.find({}).exec(function(error,data){
+     if(error){
+        res.send(error)
+      }
+      if(data.length==0){
+           var NewID = new ID ({     
+           testId:"hello",
+           testId2:"hh",
+           Id:4
+  });
+      NewID.save(function(err,doc){
+          if (err){
+          console.log('err: ' + error);
+          res.json('error: there was an error');
+          }
+          else{  
+          console.log(doc) 
+          res.send("Creating ID Object");
+          //res.redirect("/home")
+          }   
+    })
+      }
+      else{
+        //console.log(data)
+        res.send("Objcect Already Saved");
+      }
+})
+
 
 
 

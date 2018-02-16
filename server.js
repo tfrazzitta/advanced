@@ -16,9 +16,9 @@ if (!process.env.MONGODB_URI){
 
         mongoose.connect("mongodb://localhost/school");
     }
-    else{
-        mongoose.connect(process.env.MONGODB_URI)
-    }
+else{
+    mongoose.connect(process.env.MONGODB_URI)
+}
 require('./config/passport')(passport); // pass passport for configuration
 app.use(morgan('dev')); // log every request to the console
 //app.use(express.bodyParser({uploadDir:'./uploads'}));
