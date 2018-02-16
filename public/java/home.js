@@ -45,7 +45,7 @@ function GetTests(){
         }).done(function(doc) {
           console.log(doc);
           console.log(data)
-          console.log(data[0]._id)
+
 
           for(i=0;i<data.length;i++){
             var button ='<li><button class="btn-primary" id="test-button" data-id="'+data[i]._id+'">'+data[i].testName+'</button>';

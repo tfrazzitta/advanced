@@ -86,4 +86,9 @@ and (max-device-width : 667px) {
 	#student-result-button{
 	width:80% !important;
 	}
+
+  .answer-margins{
+  margin-left:0px !important;
+  margin-right:0px !important;
+}
 }
