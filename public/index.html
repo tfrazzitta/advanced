@@ -31,11 +31,11 @@
 $("#google").hide();
 
 $(document).ready(function(){
-  // $("#google").hide();
-  //   $.get('/createid').done(function(id) {
-  //     console.log(id)
-  //     //checkUser();
-  //   })
+  $("#google").hide();
+    $.get('/createid').done(function(id) {
+      console.log(id)
+      //checkUser();
+    })
 
     setTimeout( function () { 
     var href = $('#google').attr('href');
