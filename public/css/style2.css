@@ -1,0 +1,89 @@
+.answer-margins{
+	margin-left:150px;
+	margin-right:150px;
+}
+
+.form-group-border{
+	background-color: lightgreen;
+	border:2px solid black;
+	margin-bottom: 20px;
+
+}
+
+.form-group-border{
+
+}
+
+.question{
+	margin-left:15px
+}
+
+.form-control{
+	width:95% !important;
+}
+
+
+
+ #append-tests{
+    display: grid;
+  }
+
+  .btn-primary{
+    margin-bottom: 30px;
+  }
+
+  .button-checkbox{
+   display:-webkit-inline-box;
+
+  }
+
+  th,td{
+    color: black;
+    text-align: center;
+  }
+
+  li{
+    list-style: none;
+  }
+
+.table thead th{
+  border-top:none !important;
+  border-bottom: :none !important;
+}
+
+.table thead th{
+  /*border-top:none;*/
+}
+
+.but-size{
+  width:30% !important;
+  margin:20px;
+}
+
+button{
+    width:60%;
+}
+
+.but-size-2{
+  width:20% !important;
+}
+
+
+
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) { 
+	.but-size,.but-size-2,button{
+		width:100% !important;
+	}
+
+	.but-size{
+		margin:0px;
+		    margin-bottom: 30px;
+	}
+
+	#student-result-button{
+	width:80% !important;
+	}
+}

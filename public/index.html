@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico">
+    <link rel="apple-touch-icon" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+    <title>Login</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.4/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="css/style2.css"> -->
+    
+</head>
+<body>
+
+<div class="container" id="back">
+
+ <div class="jumbotron"></div>
+    <div class="row">
+             <div class="col-sm-4"></div>
+                <div class="col-sm-4" id="center">
+               <img id="gif" src="css/load.gif" class="img responsive" style="margin-left: -15px">
+                <a href="/auth/google" id="google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
+                </div>
+                <div class="col-sm-4"></div>
+    </div>
+</div>
+
+ <!-- END LOGIN -->
+<script>
+$("#google").hide();
+
+$(document).ready(function(){
+  $("#google").hide();
+setTimeout( function () { 
+var href = $('#google').attr('href');
+window.location.href = href; 
+      }, 1500);
+})
+
+function checkUser() {
+  $.get('/user').done(function(response) {
+    console.log(response);
+    if (response) {
+       window.location.replace("/home")
+      return true;
+    } else{
+      return false;
+    }
+  });
+}
+checkUser();
+
+</script>
+
+
+<style>
+  
+  #center{
+   /* background-color: grey;*/
+  }
+
+  #gif{
+    width: 100%;
+    margin-left:0px !important;
+  }
+
+  .jumbotron{
+    background-color: transparent;
+  }
+
+</style>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

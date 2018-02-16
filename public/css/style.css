@@ -1,0 +1,152 @@
+  
+  .table-container{
+	  width: 100%;
+	  overflow-y: auto;
+	  overflow: auto;
+	  margin: 0 0 1em;
+	  border: 10px solid black;
+	  background-color: #444;
+	  border:10px solid black;
+	  opacity: .7;
+	  color: black;
+	}
+
+	#error-message{
+		font-size: 25px;
+	}
+
+	#inline{
+		display: inline-flex;
+		line-height: 3;
+	}
+
+	.checkbox-2-moveright{
+		margin-left:50px;
+	}
+
+	.form-group{
+		margin-bottom: 60px;
+		
+	}
+
+	#name-center,#last-name,#first-name,input{
+		text-align: center;
+	}
+
+	.form-control{
+		width: inherit;
+	}
+
+
+	label{
+		text-align: left;
+	}
+
+	input,.form-group{
+		color: white !important;
+		text-shadow: 2px 2px 2px black !important;
+		 -/*==webkit-text-stroke:.3px black !important;
+		/* text-align: center;*/
+	}
+
+	.input{
+		margin-left: 80px !important;
+	    width:50% !important;
+	    background: transparent !important;
+		border-top:none !important;
+		border-left:none !important;
+		border-right:none !important;
+	}
+
+	select{
+		opacity: .4;
+		margin-left: 80px !important;
+	   width:50% !important;
+	}
+
+	#q1,#q3,#q4,#q6,#q9,#q10,#q11,#q12,#q13,#q14,#q16,#q18,#q19{
+		height:20px; 
+		width:20px;
+		margin-left: 80px;
+		position: relative;
+		top: 5px;
+		right: 5px;
+
+	}
+
+	#a{
+		text-align: center !important;
+	}
+
+.checkbox-2-moveright{
+	/*margin-left: 20px;*/
+}
+
+
+.table thead th{
+font-size: 10px;
+}
+
+
+.modal-footer{
+	border-top:none;
+}
+
+.modal-header{
+	border-bottom:none;
+}
+
+.modal-body{
+	text-align: center;
+	font-size: 18px;
+	margin-top: -10px;
+	font-weight: bold;
+}
+
+.jumbotron{
+background: url('http://www.firstprez.com/wp-content/uploads/2018/01/SB-logo-2018.png');
+background-size: 100% 100%;
+height:200px;
+opacity: .8;
+}
+
+/*background-color: #444;*/
+
+html{
+	background: url("http://botcrawl.com/wp-content/uploads/2012/08/American-Flag-Eagle.jpg") 
+	no-repeat center center fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+  	/*zoom:80%;*/
+
+
+}
+
+body{
+	background:transparent;
+	height: 100%;
+    margin: 0;
+    /*overflow: auto;*/
+ /*  overflow-y: scroll; 
+  -webkit-overflow-scrolling: touch;*/
+}
+
+
+@media only screen 
+and (min-device-width:375px) 
+and (max-device-width:667px)and (orientation : landscape) { 
+
+
+#button{
+	margin-bottom: -30px;
+	}
+}
+
+
+
+

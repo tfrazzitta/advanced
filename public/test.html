@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-3">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta id="extViewportMeta" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Super Bowl</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.4/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style2.css">
+    
+
+  </head>
+
+  <body style="color: white;overflow-y: scroll;-webkit-overflow-scrolling: touch; color: black">
+<!-- MAIN CONTAINER-->
+<div class="container">
+  <!-- JUMBOTRON -->
+  <div class="jumbotron text-center">
+    <h1>Step 1: Make a test</h1>
+        <p>Create 10 questions along with answer choice options</p>
+  </div>
+  <!-- JUMBOTRON END-->
+  <div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <!-- FORM -->
+
+
+<form id="contact-form" action="/submit-test" method="POST">
+    <div class="form-group-border">
+  <div class="form-group" id="name-center">
+    Give your test a Name:<input type="text" class="form-control input question" id="testName"  name="testName">
+  </div>
+</div>
+
+
+<div class="form-group-border">
+  <div class="form-group" id="name-center">
+    Question 1:<input type="text" class="form-control input question" id="q1"  name="q1">
+  </div>
+
+  <div class="answer-margins">
+      <div class="form-group" id="name-center">
+        Answer a:<input type="text" class="form-control input" id="a1"  name="a1">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer b:<input type="text" class="form-control input" id="b1"  name="b1">
+      </div>
+  
+      <div class="form-group" id="name-center">
+        Answer c:<input type="text" class="form-control input" id="c1"  name="c1">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer d:<input type="text" class="form-control input" id="d1"  name="d1">
+      </div>
+  </div>
+</div>
+
+<div class="form-group-border">
+  <div class="form-group" id="name-center">
+    Question 2:<input type="text" class="form-control input question" id="q2"  name="q2">
+  </div>
+  <div class="answer-margins">
+      <div class="form-group" id="name-center">
+        Answer a:<input type="text" class="form-control input" id="a2"  name="a2">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer b:<input type="text" class="form-control input" id="b2"  name="b2">
+      </div>
+  
+      <div class="form-group" id="name-center">
+        Answer c:<input type="text" class="form-control input" id="c2"  name="c2">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer d:<input type="text" class="form-control input" id="d2"  name="d2">
+      </div>
+  </div>
+</div>
+     
+
+<div class="form-group-border">
+  <div class="form-group" id="name-center">
+    Question 3:<input type="text" class="form-control input question" id="q3"  name="q3">
+  </div>
+  <div class="answer-margins">
+      <div class="form-group" id="name-center">
+        Answer a:<input type="text" class="form-control input" id="a3"  name="a3">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer b:<input type="text" class="form-control input" id="b3"  name="b3">
+      </div>
+  
+      <div class="form-group" id="name-center">
+        Answer c:<input type="text" class="form-control input" id="c3"  name="c3">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer d:<input type="text" class="form-control input" id="d3"  name="d3">
+      </div>
+  </div>
+</div>
+
+<div class="form-group-border">
+  <div class="form-group" id="name-center">
+    Question 4:<input type="text" class="form-control input" id="q4"  name="q4">
+  </div>
+  <div class="answer-margins">
+      <div class="form-group" id="name-center">
+        Answer a:<input type="text" class="form-control input" id="a4"  name="a4">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer b:<input type="text" class="form-control input" id="b4"  name="b4">
+      </div>
+  
+      <div class="form-group" id="name-center">
+        Answer c:<input type="text" class="form-control input" id="c4"  name="c4">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer d:<input type="text" class="form-control input" id="d4"  name="d4">
+      </div>
+  </div>
+</div>
+
+<div class="form-group-border">
+    <div class="form-group" id="name-center">
+    Question 5:<input type="text" class="form-control input" id="q5"  name="q5">
+  </div>
+  <div class="answer-margins">
+      <div class="form-group" id="name-center">
+        Answer a:<input type="text" class="form-control input" id="a5"  name="a5">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer b:<input type="text" class="form-control input" id="b5"  name="b5">
+      </div>
+  
+      <div class="form-group" id="name-center">
+        Answer c:<input type="text" class="form-control input" id="c5"  name="c5">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer d:<input type="text" class="form-control input" id="d5"  name="d5">
+      </div>
+ </div>
+</div>
+
+
+
+<div class="form-group-border">
+  <div class="form-group" id="name-center">
+    Question 6:<input type="text" class="form-control input" id="q6"  name="q6">
+  </div>
+
+  <div class="answer-margins">
+      <div class="form-group" id="name-center">
+        Answer a:<input type="text" class="form-control input" id="a6"  name="a6">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer b:<input type="text" class="form-control input" id="b6"  name="b6">
+      </div>
+  
+      <div class="form-group" id="name-center">
+        Answer c:<input type="text" class="form-control input" id="c6"  name="c6">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer d:<input type="text" class="form-control input" id="d6"  name="d6">
+      </div>
+  </div>
+</div>
+
+
+<div class="form-group-border">
+  <div class="form-group" id="name-center">
+    Question 7:<input type="text" class="form-control input" id="q7"  name="q7">
+  </div>
+  <div class="answer-margins">
+      <div class="form-group" id="name-center">
+        Answer a:<input type="text" class="form-control input" id="a7"  name="a7">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer b:<input type="text" class="form-control input" id="b7"  name="b7">
+      </div>
+  
+      <div class="form-group" id="name-center">
+        Answer c:<input type="text" class="form-control input" id="c7"  name="c7">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer d:<input type="text" class="form-control input" id="d7"  name="d7">
+      </div>
+  </div>
+</div>
+     
+
+<div class="form-group-border">
+  <div class="form-group" id="name-center">
+    Question 8:<input type="text" class="form-control input" id="q8"  name="q8">
+  </div>
+  <div class="answer-margins">
+      <div class="form-group" id="name-center">
+        Answer a:<input type="text" class="form-control input" id="a8"  name="a8">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer b:<input type="text" class="form-control input" id="b8"  name="b8">
+      </div>
+  
+      <div class="form-group" id="name-center">
+        Answer c:<input type="text" class="form-control input" id="c8"  name="c8">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer d:<input type="text" class="form-control input" id="d8"  name="d8">
+      </div>
+  </div>
+</div>
+
+
+<div class="form-group-border">
+  <div class="form-group" id="name-center">
+    Question 9:<input type="text" class="form-control input" id="q9"  name="q9">
+  </div>
+   <div class="answer-margins">
+      <div class="form-group" id="name-center">
+        Answer a:<input type="text" class="form-control input" id="a9"  name="a9">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer b:<input type="text" class="form-control input" id="b9"  name="b9">
+      </div>
+  
+      <div class="form-group" id="name-center">
+        Answer c:<input type="text" class="form-control input" id="c9"  name="c9">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer d:<input type="text" class="form-control input" id="d9"  name="d9">
+      </div>
+  </div>
+</div>
+
+<div class="form-group-border">
+    <div class="form-group" id="name-center">
+    Question 10:<input type="text" class="form-control input" id="q10"  name="q10">
+  </div>
+  <div class="answer-margins">
+      <div class="form-group" id="name-center">
+        Answer a:<input type="text" class="form-control input" id="a10"  name="a10">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer b:<input type="text" class="form-control input" id="b10"  name="b10">
+      </div>
+  
+      <div class="form-group" id="name-center">
+        Answer c:<input type="text" class="form-control input" id="c10"  name="c10">
+      </div>
+
+       <div class="form-group" id="name-center">
+        Answer d:<input type="text" class="form-control input" id="d10"  name="d10">
+      </div>
+  </div>
+</div>
+
+
+     <div class="form-group" id="name-center">
+      <div id="error-message"></div><br>
+      <div id="inline"><button type="submit" class="btn btn-primary">Submit</button></div>
+    </div>
+
+
+   </form><!-- form end -->
+  </div>   <!--col-3 -->
+  <div class="col-md-2"></div> 
+</div> <!-- ROW END -->
+</div><!-- MAIN CONTAINER END -->
+
+
+
+  <script src="java/form.js"></script>
+  <!-- <script src="java/'''''.js"></script> -->
+
+
+
+
+
+
+<script>
+// $(document).ready(function(){
+//   $.ajax({
+//         method: "GET",
+//         url: '/show-test'
+//       }).done(function(data) {
+//         for(i=0;i<data.length;i++){
+//             $("#test").append('<div class="form-group"><label for="'+i+'">'+ data[i].question+'</label><select class="form-control" id="'+i+'" name="'+i+'"><option selected="true" disabled="disabled"></option> <option>"'+answer[i].answer[0]+'"</option><option>"'+answer[i].answer[1]+'"</option><option>"'+answer[i].answer[2]+'"</option><option>"'+answer[i].answer[3]+'"</option></select></div>')
+//           }
+      
+
+//     })
+// $(document).ready(function(){
+//   $.ajax({
+//         method: "GET",
+//         url: '/get-test'
+//       }).done(function(data) {
+//           if(data.length>0){
+//             alert("You already submitted a test")
+//           }
+
+//       })
+// })
+
+
+
+
+
+</script>
+  </body>
+</html>
+
