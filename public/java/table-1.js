@@ -30,6 +30,10 @@ $(document).ready(function(){
         method: "GET",
         url: '/show-one-in-table'
       }).done(function(data) {
+
+      	if(data.length==0){
+      		return false;
+      	}
       	console.log(data)
 	      	for(i=0;i<data.length;i++){
 
