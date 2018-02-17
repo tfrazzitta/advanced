@@ -34,6 +34,7 @@ $(document).ready(function(){
       	console.log(data)
       	StudentCount = data.length;
       	console.log(StudentCount)
+
       	// if(data==="You are not authorized to access this infornation"){
       	// 	$("#th-append").empty();
       	// 	$("#t-body").html(data);
@@ -141,6 +142,7 @@ function ArrangeScore(scoreArray,test){
 		console.log(scoreArray)
 		console.log(test)
 		var count= 10;
+		if(scoreArray.length!=0){
 	    $("#t-body").append(
 	   	"<tr style='background-color:lightgreen;color:black;'><td>Answer</td><td>"
 	   	+test[0].Choice1+
@@ -155,7 +157,7 @@ function ArrangeScore(scoreArray,test){
 	   	"</td><td>"+test[0].Choice10+
 	   	"</td><td>"+count+
 	   	"</td></tr>");	
-	
+	}
  	scoreArray.sort(function(a, b){
 		return b.score-a.score;
 	});
