@@ -21,6 +21,8 @@ app.post("/submit-test",function(req,res){
 
       testMaker:req.user.google.name,
 
+      testCode:Math.floor((Math.random() * 10000) + 1),
+
       q1: req.body.q1,
       Answer1: [req.body.a1, req.body.b1, req.body.c1, req.body.d1],
 
@@ -164,22 +166,8 @@ app.get("/get-test", function(req, res) {
 
 
 
-// app.get("/find-test:_id", function(req, res) {
-//    Test.find({_id:req.params.id}).exec(function(error,doc){
-//       if (error) {
-//        console.log(error)
-//       }
-//       else {
-//         //res.send(doc);
-//         console.log(doc)
-//       }
-//     })
-// })
-
-
 
 app.post("/student-test",function(req,res){
-
 ID.find({Id:4}).exec(function(error,data){
 if (error){
 console.log('err: ' + error);
@@ -223,72 +211,6 @@ else{
 
 
 
-
-
-  // console.log(req.body)
-  // var NewAnswer = new Answer ({     
-  //     firstName: req.body.firstName,
-  //     lastName: req.body.lastName,
-  //         q1: req.body.q1,
-  //         q2: req.body.q2,
-  //         q3: req.body.q3,
-  //         q4: req.body.q4,
-  //         q5: req.body.q5,
-  //         q6: req.body.q6,
-  //         q7: req.body.q7,
-  //         q8: req.body.q8,
-  //         q9: req.body.q9,
-  //         q10: req.body.q10,
-  //     score: 0
-  // });
-  //     NewAnswer.save(function(err,doc){
-  //         if (err){
-  //         console.log('err: ' + error);
-  //         res.json('error: there was an error');
-  //         }
-  //         else{  
-  //         console.log(doc) 
-  //         res.redirect("/")
-  //         }   
-  //   })
-
-//})
-
-
-
-// app.post("/answer",function(req,res){
-//   console.log(req.body)
-//   var NewAnswer = new Answer ({     
-//       firstName: req.body.firstName,
-//       lastName: req.body.lastName,
-//           q1: req.body.q1,
-//           q2: req.body.q2,
-//           q3: req.body.q3,
-//           q4: req.body.q4,
-//           q5: req.body.q5,
-//           q6: req.body.q6,
-//           q7: req.body.q7,
-//           q8: req.body.q8,
-//           q9: req.body.q9,
-//           q10: req.body.q10,
-//       score: 0
-//   });
-//       NewAnswer.save(function(err,doc){
-//           if (err){
-//           console.log('err: ' + error);
-//           res.json('error: there was an error');
-//           }
-//           else{  
-//           console.log(doc) 
-//           res.redirect("/")
-//           }   
-//     })
-
-// })
-
-
-
-
 app.post("/retrieve-test/:id",function(req,res){
     console.log(req.params.id)
     ID.update({Id:4}, {$set:{testId:req.params.id}}).exec(function(error,doc){
@@ -297,12 +219,20 @@ app.post("/retrieve-test/:id",function(req,res){
           res.json('error: there was an error');
           }
           else{  
-          //console.log(doc) 
-          res.redirect("/home")
-          }   
+           Test.find({_id:req.params.id}).exec(function(error,doc){
+                 if (error){
+                    console.log('err: ' + error);
+                    res.json('error: there was an error');
+                  }
+                  else{ 
+                  console.log(doc)
+
+                  res.send(doc) 
+                  }   
+          })
+        } 
     })
 });
-
 
 
 
@@ -349,81 +279,6 @@ app.get("/get-one-test/",function(req,res){
     })
 });
 
-
-
-
-
-
-// app.post("/answer",function(req,res){
-
-//   Answer.find({}).exec(function(error,doc){
-//     if(doc.length===0){
-
-//       var NewAnswer = new Answer ({     
-//           firstName: req.body.firstName,
-//           lastName: req.body.lastName,
-//           q1: req.body.q1,
-//           q2: req.body.q2,
-//           q3: req.body.q3,
-//           q4: req.body.q4,
-//           q5: req.body.q5,
-//           q6: req.body.q6,
-//           q7: req.body.q7,
-//           q8: req.body.q8,
-//           q9: req.body.q9,
-//           q10: req.body.q10,
-//           q11: req.body.q11,
-//           q12: req.body.q12,
-//           q13: req.body.q13,
-//           q14: req.body.q14,
-//           q15: req.body.q15,
-//           q16: req.body.q16,
-//           q17: req.body.q17,
-//           q18: req.body.q18,
-//           q19: req.body.q19,
-//           q20: req.body.q20,
-//           score: 20
-//       });
-//           NewAnswer.save(function(err,doc){
-//               if (err){
-//               console.log('err: ' + error);
-//               res.json('error: there was an error');
-//               }
-//               else{  
-//               console.log(doc) 
-//               res.redirect("/table")
-//               }   
-//           })
-
-//     } //if
-
-//       else{
-//         for (var i in req.body) {
-//           (function(i){
-//            if(req.body[i] !=''){
-//             var obj={};
-//              obj[i] = req.body[i];
-//               console.log(i)
-//               console.log(req.body[i])     
-//               Answer.update({firstName:"answer"}, {$set:obj}).exec(function(error,doc){
-//                  if (error) {
-//                    console.log(error)
-//                   }
-//                   else{
-//                     Answer.find({firstName:"answer"}).exec(function(error,doc){
-//                       console.log(doc)
-//                     })
-//                   }
-              
-//               })
-//            }
-
-//           })(i)
-//         }//for         
-//         res.redirect("/table")
-//       }//else
-//   })  
-// });
 
 
 
@@ -566,7 +421,6 @@ app.get("/show-answer",function(req,res){
 
 
 app.post("/delete-test", function(req, res) {
-  console.log("DELETEDDDDDD")
   console.log(req.body.DeleteArray)
   var DelArray =req.body.DeleteArray; 
   var calls =0;
@@ -575,27 +429,48 @@ app.post("/delete-test", function(req, res) {
               if(error){
                 res.send(error)
               }
-              else{
-                //calls++
-                console.log("DELETEDDDDDD")
-                Answer.find({}).exec(function(error,doc){
-                    if (error) {
-                     console.log(error)
-                    }
-                           // else {
-                    if(calls===DelArray.length){
-                      console.log(DelArray);
-                      res.send(DelArray)
-                    }
-                    else{
-                      calls++;
-                    }
-        
-                });
-              } 
+
           })
-      }  
-      res.send(DelArray)    
+      }
+
+      
+      
+             //else{
+                //calls++
+                //console.log("DELETEDDDDDD")
+                // Test.find({}).exec(function(error,doc){
+                //     if (error) {
+                //      console.log(error)
+                //     }
+                //            // else {
+                //     if(calls===DelArray.length){
+                //       //console.log(DelArray);
+                //       res.send(DelArray)
+                //     }
+                //     else{
+                //       calls++;
+                //     }
+        
+                // });
+             // }
+            Test.find({}).exec(function(error,doc){
+                if (error) {
+                 console.log(error)
+                }
+                       // else {
+                // if(calls===DelArray.length){
+                //   //console.log(DelArray);
+                //   res.send(doc)
+               // }
+                else{
+                 // calls++;
+                  res.send(doc)
+                }
+    
+            }); 
+         // })
+      //}  
+      //res.send(DelArray)    
 })
 
 
@@ -698,43 +573,80 @@ app.get("/createid", function(req, res) {
         //console.log(data)
         res.send("Objcect Already Saved");
       }
+  })
 })
-})
 
 
 
-/////////////////// PAGES
-// app.get('/', function(req, res){
-//  res.render('index');
-// });
+///////////////// PAGES
+app.get('/', function(req, res){
+ res.render('index');
+});
+
 
 app.get("/answer", function(req, res) {
   res.sendFile(path.join(__dirname, "../public/answer.html"));
 });
 
-app.get("/table", function(req, res) {
-  res.sendFile(path.join(__dirname, "../public/table.html"));
-});
 
-app.get("/placing", function(req, res) {
-  res.sendFile(path.join(__dirname, "../public/placing.html"));
-});
-
-app.get("/test", function(req, res) {
-  res.sendFile(path.join(__dirname, "../public/test.html"));
-});
-
-app.get("/exam", function(req, res) {
-  res.sendFile(path.join(__dirname, "../public/exam.html"));
-});
 
 app.get("/home", function(req, res) {
-  res.sendFile(path.join(__dirname, "../public/home.html"));
+    if(req.user==undefined){
+       res.redirect("/")
+    }
+    else{
+      res.sendFile(path.join(__dirname, "../public/home.html"));
+    }   
 });
 
 app.get("/admin-table", function(req, res) {
-  res.sendFile(path.join(__dirname, "../public/admin-table.html"));
+    if(req.user==undefined){
+       res.redirect("/")
+    }
+    else{
+      res.sendFile(path.join(__dirname, "../public/admin-table.html"));
+    }  
 });
+
+
+app.get("/exam", function(req, res) {
+    if(req.user==undefined){
+       res.redirect("/")
+    }
+    else{
+      res.sendFile(path.join(__dirname, "../public/exam.html"));
+    }  
+});
+
+app.get("/table", function(req, res) {
+    if(req.user==undefined){
+       res.redirect("/")
+    }
+    else{
+      res.sendFile(path.join(__dirname, "../public/table.html"));
+    }  
+});
+
+app.get("/test", function(req, res) {
+    if(req.user==undefined){
+       res.redirect("/")
+    }
+    else{
+      res.sendFile(path.join(__dirname, "../public/test.html"));
+    }  
+});
+
+
+app.get("/placing", function(req, res) {
+    if(req.user==undefined){
+       res.redirect("/")
+    }
+    else{
+      res.sendFile(path.join(__dirname, "../public/placing.html"));
+    }  
+});
+
+
 
 }////MODULE END///////
 

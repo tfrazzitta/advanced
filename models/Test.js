@@ -36,6 +36,7 @@ var TestSchema = new Schema({
       Choice10: String, 
       testName: String, 
       testMaker:String,
+      testCode:Number,
       score: {type: Number},                                                             
       id:{type: Schema.Types.ObjectId}  
 });

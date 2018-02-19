@@ -1,11 +1,11 @@
 
 var scoreArray=[];
 var StudentCount;
+var code;
 $(document).ready(function(){	
-		$("#t-body").empty();
+	$("#t-body").empty();
   	$("#th-append").empty();
- // $("#myModal").modal("toggle")
- // $("#mod-bod").html("Rotate your phone to landscape");
+
 
  	$.ajax({
     method: "GET",
@@ -13,11 +13,11 @@ $(document).ready(function(){
   }).done(function(test) {
   		console.log("test")
   		console.log(test)
+  		code = test[0].testMaker
 
   		QuestionArray=[test[0].q1, test[0].q2,test[0].q3,test[0].q4,test[0].q5,
                        test[0].q6, test[0].q7,test[0].q8,test[0].q9,test[0].q10]
         
-        //$("#th-append").append('<th>First Name</th><th>Last Name</th>');
         $("#th-append").append('<th>Ful Name</th>');
 
         for(i=0;i<QuestionArray.length;i++){
@@ -26,7 +26,8 @@ $(document).ready(function(){
   	 	}
   	 	$("#th-append").append('<th>score</th>');
 
-
+  	 	// $("#code").html("code : " +code);
+  	 	
 	$.ajax({
         method: "GET",
         url: '/show-all-in-table'
@@ -35,13 +36,6 @@ $(document).ready(function(){
       	StudentCount = data.length;
       	console.log(StudentCount)
 
-      	// if(data==="You are not authorized to access this infornation"){
-      	// 	$("#th-append").empty();
-      	// 	$("#t-body").html(data);
-
-      	// }
-
-      	//else{
 	      	for(i=0;i<data.length;i++){
 
 			      			
@@ -134,7 +128,7 @@ function ArrangeScore(scoreArray,test){
 				$("#percentage").html("");
 			}
 			else{
-				$("#percentage").html(avg +" % average")
+				$("#percentage").html("Score : "+avg +" % average")
 			}
 		
 
@@ -142,22 +136,22 @@ function ArrangeScore(scoreArray,test){
 		console.log(scoreArray)
 		console.log(test)
 		var count= 10;
-		if(scoreArray.length!=0){
-	    $("#t-body").append(
-	   	"<tr style='background-color:lightgreen;color:black;'><td>Answer</td><td>"
-	   	+test[0].Choice1+
-	   	"</td><td>"+test[0].Choice2+
-	   	"</td><td>"+test[0].Choice3+
-	   	"</td><td>"+test[0].Choice4+
-	   	"</td><td>"+test[0].Choice5+
-	   	"</td><td>"+test[0].Choice6+
-	   	"</td><td>"+test[0].Choice7+
-	   	"</td><td>"+test[0].Choice8+
-	   	"</td><td>"+test[0].Choice9+
-	   	"</td><td>"+test[0].Choice10+
-	   	"</td><td>"+count+
-	   	"</td></tr>");	
-	}
+	 	if(scoreArray.length!=0){
+		    $("#t-body").append(
+		   	"<tr style='background-color:lightgreen;color:black;'><td>Answer</td><td>"
+		   	+test[0].Choice1+
+		   	"</td><td>"+test[0].Choice2+
+		   	"</td><td>"+test[0].Choice3+
+		   	"</td><td>"+test[0].Choice4+
+		   	"</td><td>"+test[0].Choice5+
+		   	"</td><td>"+test[0].Choice6+
+		   	"</td><td>"+test[0].Choice7+
+		   	"</td><td>"+test[0].Choice8+
+		   	"</td><td>"+test[0].Choice9+
+		   	"</td><td>"+test[0].Choice10+
+		   	"</td><td>"+count+
+		   	"</td></tr>");	
+		}
  	scoreArray.sort(function(a, b){
 		return b.score-a.score;
 	});
@@ -192,6 +186,9 @@ function ArrangeScore(scoreArray,test){
 	}
 
 	$("#t-body").append("<tr><td> Total Students : "+StudentCount+"</tr></td>" )
+
+
+	
 
 }
 
