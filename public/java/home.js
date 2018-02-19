@@ -44,7 +44,7 @@ $(document).on("click","#code",function(){
 
 
 var n=0;
-$(document).on("click","#class-codes",function(){
+$(document).on("click touchstart","#class-codes",function(){
   console.log(n)
  n++; 
   for(i=0;i<codeArray.length;i++){
