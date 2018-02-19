@@ -130,9 +130,9 @@ and (max-device-width : 667px)and (orientation : portrait) {
 
     }
 #test-button{
-  margin-left: 60px;
-      padding: 10px;
-    font-size: 20px;
+  margin-left: 50px;
+      padding: 5px;
+    font-size: 14px;
 }
 
 
