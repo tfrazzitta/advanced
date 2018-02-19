@@ -579,9 +579,9 @@ app.get("/createid", function(req, res) {
 
 
 ///////////////// PAGES
-app.get('/', function(req, res){
- res.render('index');
-});
+// app.get('/', function(req, res){
+//  res.render('index');
+// });
 
 
 app.get("/answer", function(req, res) {
