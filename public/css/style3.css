@@ -1,5 +1,5 @@
 
-html{
+/*html{
 	background: url("http://eskipaper.com/images/subtle-orange-wallpaper-1.jpg") 
 	no-repeat center center fixed;
 	background-size: cover;
@@ -12,15 +12,22 @@ html{
   	/*zoom:80%;*/
 
 
-}
-
+/*}*/
+/*
 body{
 	background:transparent;
 	height: 100%;
     margin: 0;
-    /*overflow: auto;*/
+    overflow: auto;
  /*  overflow-y: scroll; 
   -webkit-overflow-scrolling: touch;*/
+/*}*/
+
+
+body{
+  background: url("http://eskipaper.com/images/subtle-orange-wallpaper-1.jpg") 
+  no-repeat center center fixed;
+  background-size: cover;
 }
 
 .jumbotron{
