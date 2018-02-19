@@ -44,7 +44,8 @@ $(document).on("click","#code",function(){
 
 
 var n=0;
-$(document).on("click touch","#class-codes",function(){
+var custom_event = $.support.touch ? "tap" : "click";
+$(document).on(custom_event,"#class-codes",function(){
   console.log(n)
  n++; 
   for(i=0;i<codeArray.length;i++){
