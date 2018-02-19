@@ -125,11 +125,15 @@ and (max-device-width : 667px) {
 and (min-device-width : 375px) 
 and (max-device-width : 667px)and (orientation : portrait) { 
 
-    #class-codes,#del,#percentage,#check,.position-codes,#student-result-button{
+    #class-codes,#del,#percentage,#check,.position-codes,#student-result-button,th{
       display: none;
 
     }
-
+#test-button{
+  margin-left: 60px;
+      padding: 10px;
+    font-size: 20px;
+}
 
 
   }
