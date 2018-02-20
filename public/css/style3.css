@@ -1,6 +1,6 @@
 
-/*html{
-	background: url("http://eskipaper.com/images/subtle-orange-wallpaper-1.jpg") 
+html{
+	background: url("/css/IMG_0224.JPG") 
 	no-repeat center center fixed;
 	background-size: cover;
 	-webkit-background-size: cover;
@@ -9,22 +9,22 @@
     height: 100%;
     overflow: hidden;
     padding: 0;
-  	/*zoom:80%;*/
+  	zoom:80%;
 
 
-/*}*/
-/*
+}
+
 body{
 	background:transparent;
 	height: 100%;
     margin: 0;
     overflow: auto;
- /*  overflow-y: scroll; 
-  -webkit-overflow-scrolling: touch;*/
-/*}*/
+   overflow-y: scroll; 
+  -webkit-overflow-scrolling: touch;
+}
 
 
-body{
+/*body{
   background: url("http://eskipaper.com/images/subtle-orange-wallpaper-1.jpg") 
   no-repeat center center fixed;
   background-size: cover;
