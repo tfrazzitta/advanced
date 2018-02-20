@@ -18,8 +18,8 @@ module.exports = {
     'googleAuth' : {
         'clientID'    :  '874728994360-neo840acv46kghbkp27b20qoojgvrueh.apps.googleusercontent.com',
         'clientSecret'  : '55gnHmnCxh_4usj7aD6dBTAr',
-        'callbackURL'   : 'http://localhost:3000/auth/google/callback'
-        // 'callbackURL'   : 'http://www.trmath.com/auth/google/callback'
+//         'callbackURL'   : 'http://localhost:3000/auth/google/callback'
+        'callbackURL'   : 'http://www.frazzle-pop.com/auth/google/callback'
     }
 
 };
