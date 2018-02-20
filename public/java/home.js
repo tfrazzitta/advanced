@@ -15,7 +15,7 @@ var testCode;
         console.log(data)
         testCode= data[0].testCode
         for(i=0;i<data.length;i++){
-          if(data[i].testMaker=== "Thomas Frazzitta"){
+          if(data[i].testMaker=== "Thomas Frazzitta" || data[i].testMaker=== "Lawrence Cuneo"){
             console.log(data[i].testMaker)
             $("#myModal").modal("toggle")
           }
@@ -48,10 +48,18 @@ $(document).on("click touchstart","#class-codes",function(){
   console.log(n)
  n++; 
   for(i=0;i<codeArray.length;i++){
-    if(name=== "Thomas Frazzitta" && n==1 || name=== "Lawrence Cuneo" && n==1 || name=== "George Peters" && n==1){
+    if(name=== "Thomas Frazzitta" && n==1 || name=== "Lawrence Cuneo" && n==1||name=== "George Peters" && n==1){
         $("#codes-"+i+"").html(codeArray[i])
 
-      }
+    }
+    // if(name=== "Lawrence Cuneo" && n==1){
+    //   $("#codes-"+i+"").html(codeArray[i])
+
+    //   }
+    //   if(name=== "George Peters" && n==1){
+    //     $("#codes-"+i+"").html(codeArray[i])
+
+    //   }
      else{
           $("#codes-"+i+"").html("");
           n=0;
@@ -132,7 +140,7 @@ function GetTests(){
             var StudentResults= '<li><button class="btn-primary" id="student-result-button" data-id="'+data[i]._id+'">Student Scores</button>';
           
 
-            if(data[i].testMaker==="Thomas Frazzitta"||data[i].testMaker==="Lawrence Cuneo" data[i].testMaker==="George Peters"){
+            if(data[i].testMaker==="Thomas Frazzitta"||data[i].testMaker==="Lawrence Cuneo" || data[i].testMaker==="George Peters"){
                   $("#t-body").prepend(
                     "<tr><td>"+Teacherbutton+"</td><td>"
                     +StudentResults+"</td><td class='text-center'><input type='checkbox' class='boom' value='true' id='check' data-id='"
