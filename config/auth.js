@@ -18,7 +18,11 @@ module.exports = {
     'googleAuth' : {
         'clientID'    :  '874728994360-neo840acv46kghbkp27b20qoojgvrueh.apps.googleusercontent.com',
         'clientSecret'  : '55gnHmnCxh_4usj7aD6dBTAr',
+<<<<<<< HEAD
         // 'callbackURL'   : 'http://localhost:3000/auth/google/callback'
+=======
+//         'callbackURL'   : 'http://localhost:3000/auth/google/callback'
+>>>>>>> c24dea82321067333c086c3509cd5a430e247326
         'callbackURL'   : 'http://www.frazzle-pop.com/auth/google/callback'
     }
 
