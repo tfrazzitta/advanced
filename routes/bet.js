@@ -642,14 +642,14 @@ app.get("/test", function(req, res) {
 });
 
 
-app.get("/placing", function(req, res) {
-    if(req.user==undefined){
-       res.redirect("/")
-    }
-    else{
-      res.sendFile(path.join(__dirname, "../public/placing.html"));
-    }  
-});
+// app.get("/placing", function(req, res) {
+//     if(req.user==undefined){
+//        res.redirect("/")
+//     }
+//     else{
+//       res.sendFile(path.join(__dirname, "../public/placing.html"));
+//     }  
+// });
 
 
 
