@@ -299,7 +299,7 @@ app.get("/show-ID", function(req, res) {
 
 
 app.get("/show-all-in-table", function(req, res) {
-if(req.user.google.name==="Thomas Frazzitta"){
+if(req.user.google.name==="Thomas Frazzitta" || req.user.google.name==="Lawrence Cuneo" || req.user.google.name==="George Peters"){
   console.log("BOOOM")
 
      ID.find({Id:4}).exec(function(error,doc){
