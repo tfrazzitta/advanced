@@ -585,7 +585,12 @@ app.get("/createid", function(req, res) {
 
 
 app.get("/answer", function(req, res) {
-  res.sendFile(path.join(__dirname, "../public/answer.html"));
+   if(req.user==undefined){
+       res.redirect("/")
+    }
+    else{
+      res.sendFile(path.join(__dirname, "../public/answer.html"));
+    }   
 });
 
 
